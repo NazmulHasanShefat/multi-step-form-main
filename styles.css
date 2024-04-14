@@ -31,6 +31,9 @@ body{
 .input_fuld_container{
     width: 75%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 /* indicatiors */
 .indicator-buttons-container{
@@ -99,3 +102,263 @@ body{
 }
 /* end indicators section */
 /* start input container */
+.step_1{
+    display: none;
+}
+.form_frame_container{
+    width: 80%;
+    height: 80%;
+}
+.myForm{
+    width: 100%;
+    height: 100%;
+    font-family: var(--heading_font);
+    font-weight: 400;
+}
+.input-heading{
+    width: 100%;
+    height: max-content;
+    font-family: var(--heading_font);
+    font-weight: 700;
+    color:var(--Marine_blue)
+}
+.input-heading h1{
+    padding-bottom:5px;
+}
+.input-titel{
+    width: 100%;
+    height: max-content;
+    font-family: var(--heading_font);
+    font-weight: 400;
+    color:var(--Cool_gray)
+}
+.input_fuld_container_main{
+    width: 100%;
+    height: max-content;
+}
+/* inputs fuld */
+.input_items{
+    width: 100%;
+    height: max-content;
+}
+.names_container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3px;
+    padding-top:20px;
+}
+.all-input-3{
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    border:1px solid var(--Light_gray);
+    outline: none;
+}
+.all-input-3:focus{
+    border:1px solid var(--Purplish_blue);
+}
+.next_button1{
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.next_btn1{
+    width: 110px;
+    height: 42px;
+    color:var(--White);
+    background-color: var(--Marine_blue);
+    border:none;
+    outline: none;
+    border-radius: 8px;
+}
+.next_btn1:hover{
+    background-color: var(--Marine_blue_hover);
+}
+/* error massage */
+.error_massage{
+    color:var(--Strawberry_red);
+}
+/* error massage */
+
+/* end step 1 */
+
+
+/* start step 2  */
+/* .setp_2{
+   display: none;
+} */
+.radio_input{
+    display: none;
+}
+.MM_yy_biling{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    gap:15px;
+    padding-top:18px;
+}
+.biling_card{
+    width: 25%;
+    height: 150px;
+}
+.card_main_box{
+    width: 100%;
+    height: max-content;
+    border:1px solid var(--Cool_gray);
+    border-radius:8px;
+    padding:10px;
+}
+/* card functions  */
+.card_main_box:hover{
+    border:1px solid var(--Purplish_blue);
+}
+input[type="radio"]:checked + label .card_main_box{
+    background-color: var(--Magnolia);
+    border:1px solid var(--Purplish_blue);
+}
+/* card box content */
+.biling-item-image{
+    width: 100%;
+    height: max-content;
+    padding-bottom:50px;
+}
+.biling-item-name{
+    width: 100%;
+    height: max-content;
+    font-family: var(--heading_font);
+    font-weight: 700;
+}
+.biling-item-price{
+    width: 100%;
+    height: max-content;
+    font-family: var(--heading_font);
+    font-weight: 400;
+    color:var(--Cool_gray);
+}
+/* month year price converter swich */
+.selectM_Y{
+    color: var(--Cool_gray);
+    font-family: var(--heading_font);
+    font-weight: 400;
+}
+.Monthly_main_text{
+    color:var(--Marine_blue);
+}
+.M_Y_converter_swich{
+    width: 95%;
+    height: 50px;
+    background-color:var(--Magnolia);
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.my_check_L2{
+    display: none;
+}
+.toggle_box{
+    width: 44px;
+    height: 23px;
+    background-color: var(--Marine_blue);
+    border-radius:20px;
+    cursor: pointer;
+}
+.toggle_box:before{
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 22px;
+    background-color: var(--Alabaster);
+    border-radius: 20px;
+    margin-top:1px;
+    transition: .3s;
+}
+input[type="checkbox"]:checked + label .toggle_box::before{
+    transform: translateX(22px);
+}
+/* 2 month free */
+.biling-item-free{
+    color:var(--Marine_blue);
+    font-family: var(--heading_font);
+    font-weight: 500;
+}
+.only_price{
+    display: flex;
+    color:var(--Cool_gray);
+}
+/* end step 2 all */
+/* prev button */
+.prev_btn{
+    border:none;
+    outline: none;
+    background-color: var(--White);
+    color:var(--Cool_gray);
+    cursor: pointer;
+    font-family: var(--heading_font);
+    font-weight: 700;
+}
+.prev_btn:hover{
+    color:var(--Marine_blue);
+    font-weight: 700;
+}
+/* start step 3 */
+.setp_3{
+    display: none;
+}
+label{
+    width: 100%;
+    height: 50px;
+}
+.sarvive_box{
+    width: 100%;
+    height: 60px;
+    /* background-color: var(--Magnolia); */
+    border:1px solid var(--Purplish_blue);
+    margin-top:13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.check_box{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sarvice_name{
+    width: 70%;
+    height: 100%;
+    font-family: var(--heading_font);
+}
+.sarvice_name_main{
+    width: 100%;
+    height: max-content;
+    margin-top:10px;
+    margin-left:8px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--heading_font);
+}
+.sarvice_datail{
+    width: 100%;
+    height: max-content;
+    margin-left:8px;
+    font-family: var(--heading_font);
+    font-weight: 400;
+    color:var(--Cool_gray);
+}
+.sarvice_price{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

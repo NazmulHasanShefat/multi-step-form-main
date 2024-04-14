@@ -74,13 +74,181 @@
        </div><!--end indicators all-->
        <div class="input_fuld_container">
         <div class="form_frame_container">
-          <div class="form_container">
-            
+        <!-- step 1 input -->
+        <form action="" class="myForm step_1">
+          <div class="input-heading">
+            <h1> Personal info</h1>
           </div>
-        </div>
-       </div>
-    </div>  
-  </div>
+          <div class="input-titel">
+            <p>Please provide your name, email address, and phone number.</p>
+          </div>
+          <div class="input_fuld_container_main">
+
+             <div class="input_items">
+              <div class="names_container">
+                <div class="labals"><label for="name">Name</label></div>
+                <div class="error_massage"><p>*input fuld requred</p></div>
+              </div>
+              <input type="text" class="name all-input-3" id="name" placeholder="e.g. Stephen King">
+             </div>
+
+             <div class="input_items">
+              <div class="names_container">
+                <div class="labals"><label for="name">Name</label></div>
+                <div class="error_massage"><p>*input fuld requred</p></div>
+              </div>
+              <input type="text" class="name all-input-3" id="name" placeholder="e.g. Stephen King">
+             </div>
+
+             <div class="input_items">
+              <div class="names_container">
+                <div class="labals"><label for="name">Name</label></div>
+                <div class="error_massage"><p>*input fuld requred</p></div>
+              </div>
+              <input type="text" class="name all-input-3" id="name" placeholder="e.g. Stephen King">
+             </div>
+
+             <div class="next_button1"><button class="next_btn1">Next</button></div>
+          </div>
+        </form>
+         <!-- end step 1  -->
+
+
+        <!-- step 2 input -->
+        <form action="" class="myForm setp_2">
+          <div class="input-heading">
+            <h1> Select your plan</h1>
+          </div>
+          <div class="input-titel">
+            <p>You have the option of monthly or yearly billing.</p>
+          </div>
+          <div class="input_fuld_container_main">
+            <div class="MM_yy_biling">
+              <div class="biling_card">
+                <input type="radio" id="card_bill_selector" class="radio_input" name="card_1" value="card_1">
+                <label for="card_bill_selector">
+                  <div class="card_main_box">
+                    <div class="biling-item-image">
+                      <img src="./assets/images/icon-arcade.svg" alt="">
+                    </div>
+                    <div class="biling-item-name"><p>Arcade</p></div>
+                    <div class="biling-item-price_Ar only_price"><p>$ 9/mo</p></div>
+                    <div class="biling-item-free"><p></p></div>
+                  </div>
+                </label>
+              </div>
+              <div class="biling_card">
+                <input type="radio" id="card_bill_selector_2" class="radio_input" name="card_1" value="card_1">
+                <label for="card_bill_selector_2">
+                 <div class="card_main_box">
+                  <div class="biling-item-image">
+                    <img src="./assets/images/icon-advanced.svg" alt="">
+                  </div>
+                  <div class="biling-item-name"><p>Advanced</p></div>
+                  <div class="biling-item-price_A only_price"><p>$ 12/mo</p></div>
+                  <div class="biling-item-free"><p></p></div>
+                 </div>
+                </label>
+              </div>
+              <div class="biling_card">
+                <input type="radio" id="card_bill_selector_3" class="radio_input" name="card_1" value="card_1">
+                <label for="card_bill_selector_3">
+                 <div class="card_main_box">
+                  <div class="biling-item-image">
+                    <img src="./assets/images/icon-pro.svg" alt="">
+                  </div>
+                  <div class="biling-item-name"><p>pro</p></div>
+                  <div class="biling-item-price_pro only_price"><p>$ 15/mo</p></div>
+                  <div class="biling-item-free"><p></p></div>
+                 </div>
+                </label>
+              </div>
+           </div>
+
+            <div class="M_Y_converter_swich">
+              <div class="Monthly_text selectM_Y"><p class="Monthly_main_text">Monthly</p></div>
+              <div class="toggle_swich">
+                <input type="checkbox" id="check" class="my_check_L2">
+                <label for="check">
+                  <div class="toggle_box"></div>
+                </label>
+              </div>
+              <div class="yearly_text selectM_Y"><p class="Yearly_main_text">Yearly</p></div>
+            </div>
+
+             <div class="next_button1"><button class="prev_btn">Go Back</button><button class="next_btn1">Next</button></div>
+          </div>
+        </form>
+          <!--end step 2 end-->
+
+
+         <!-- step 3 -->
+         <form action="" class="myForm setp_3">
+          <div class="input-heading">
+            <h1>Pick add-ons</h1>
+          </div>
+          <div class="input-titel">
+            <p>Add-ons help enhance your gaming experience.</p>
+          </div>
+          <div class="input_fuld_container_main">
+            <label for="Labal_box1">
+              <div class="sarvive_box sarvice_box_1">
+                <div class="check_box">
+                  <input type="checkbox" class="check_box_L3_in" id="Labal_box1">
+                </div>
+                <div class="sarvice_name">
+                  <div class="sarvice_name_main"><p>Online service</p></div>
+                  <div class="sarvice_datail"><p>Access to multiplayer games</p></div>
+                </div>
+                <div class="sarvice_price">+$ 1/mo</div>
+              </div>
+            </label>
+            <label for="Labal_box2">
+              <div class="sarvive_box sarvice_box_2">
+                <div class="check_box">
+                  <input type="checkbox" class="check_box_L3_in" id="Labal_box2">
+                </div>
+                <div class="sarvice_name">
+                  <div class="sarvice_name_main"><p>Larger storage</p></div>
+                  <div class="sarvice_datail"><p>Extra 1TB of cloud save</p></div>
+                </div>
+                <div class="sarvice_price">+$ 2/mo</div>
+              </div>
+            </label>
+
+            <label for="Labal_box3">
+              <div class="sarvive_box sarvice_box_3">
+                <div class="check_box">
+                   <input type="checkbox" class="check_box_L3_in" id="Labal_box3">
+                </div>
+                <div class="sarvice_name">
+                  <div class="sarvice_name_main"><p>Customizable Profile</p></div>
+                  <div class="sarvice_datail"><p>Custom theme on your profile</p></div>
+                </div>
+                <div class="sarvice_price"><p>+$ 2/mo</p></div>
+              </div>
+            </label>
+            </div>
+
+             <div class="next_button1"><button class="prev_btn">Go Back</button><button class="next_btn1">Next</button></div>
+          </div>
+        </form>
+
+
+        <!-- end step 3 -->
+
+
+
+
+         </div><!--frame-->
+      </div><!--fuld container-->
+     
+
+
+
+
+    </div><!--main content box-->
+  </div><!--full page-->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
