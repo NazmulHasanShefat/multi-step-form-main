@@ -46,6 +46,7 @@ let service3 = document.querySelector(".sarvice_box_3");
 check1.addEventListener("click",()=>{
     if(check1.checked){
         service1.style.backgroundColor = "hsl(217, 100%, 97%)";
+        service1.style.borderColor = "hsl(243, 100%, 62%)";
     }
     else{
         service1.style.backgroundColor = "";
@@ -54,6 +55,7 @@ check1.addEventListener("click",()=>{
 check2.addEventListener("click",()=>{
     if(check2.checked){
         service2.style.backgroundColor = "hsl(217, 100%, 97%)";
+        service2.style.borderColor = "hsl(243, 100%, 62%)";
     }
     else{
         service1.style.backgroundColor = "";
@@ -62,8 +64,12 @@ check2.addEventListener("click",()=>{
 check3.addEventListener("click",()=>{
     if(check3.checked){
         service3.style.backgroundColor = "hsl(217, 100%, 97%)";
+        service3.style.borderColor = "hsl(243, 100%, 62%)";
     }
     else{
         service1.style.backgroundColor = "";
     }
 });
+// end step 3 all
+
+// start step 4
