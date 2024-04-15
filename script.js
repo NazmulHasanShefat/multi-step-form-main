@@ -17,8 +17,8 @@ input_fuld.addEventListener("click",()=>{
         };
         // chenge price
         price_Low.innerHTML = `$<p id="price_low">90<p>/yr`
-        price_Advance.innerHTML = `$<p id="price_low">120<p>/yr`
-        price_pro.innerHTML = `$<p id="price_low">150<p>/yr`
+        price_Advance.innerHTML = `$<p id="price_advance">120<p>/yr`
+        price_pro.innerHTML = `$<p id="price_pro">150<p>/yr`
 
     }
     else{
@@ -72,4 +72,59 @@ check3.addEventListener("click",()=>{
 });
 // end step 3 all
 
+// step transfar value step 3 
+let last_price_select1 = document.querySelector(".L3_last_select1");
+let last_price_select2 = document.querySelector(".L3_last_select2");
+let last_price_select3 = document.querySelector(".L3_last_select3");
+input_fuld.addEventListener("click",()=>{
+    if(input_fuld.checked){
+       last_price_select1.innerHTML = `$<p id="price_low">90<p>/yr`
+       last_price_select2.innerHTML = `$<p id="price_low">10<p>/yr`
+       last_price_select3.innerHTML = `$<p id="price_low">20<p>/yr`
+    }
+    else{
+        last_price_select1.innerHTML = `$<p id="price_low">9<p>/mo`
+        last_price_select2.innerHTML = `$<p id="price_low">1<p>/mo`
+        last_price_select3.innerHTML = `$<p id="price_low">2<p>/mo`
+    }
+});
+
 // start step 4
+// transfar all value for total 
+let L2_bil_name1 = document.querySelector("#card_bill_selector");
+let L2_bil_name2 = document.querySelector("#card_bill_selector_2");
+let L2_bil_name3 = document.querySelector("#card_bill_selector_3");
+let bil_name1 = document.querySelector(".biling_name1");
+let bil_name2 = document.querySelector(".biling_name2");
+let bil_name3 = document.querySelector(".biling_name3");
+// dashbord
+let L2_dashBord_name_main = document.querySelector(".L2_dashBord_main_name");
+let L2_dashBord_price = document.querySelector(".dash_L2_price");
+
+L2_bil_name1.addEventListener("click",()=>{
+    if(L2_bil_name1.checked){
+       let total_bill_name = bil_name1.innerHTML
+       L2_dashBord_name_main.innerHTML = total_bill_name;
+    }
+    else{
+
+    }
+});
+L2_bil_name2.addEventListener("click",()=>{
+    if(L2_bil_name2.checked){
+       let total_bill_name = bil_name2.innerHTML
+       L2_dashBord_name_main.innerHTML = total_bill_name;
+    }
+    else{
+
+    }
+});
+L2_bil_name3.addEventListener("click",()=>{
+    if(L2_bil_name3.checked){
+       let total_bill_name = bil_name3.innerHTML
+       L2_dashBord_name_main.innerHTML = total_bill_name;
+    }
+    else{
+      
+    }
+});
