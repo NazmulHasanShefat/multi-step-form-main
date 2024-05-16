@@ -543,11 +543,39 @@ label{
         top:-26px;
         border-radius:30px;
     }
-    .myForm{
+    .myForm, .myForm2, .myForm3, .myForm4{
         width: 85%;
         height: 100%;
         font-family: var(--heading_font);
         font-weight: 400;
         margin-top:20px;
+    }
+    /* step 2 */
+    .MM_yy_biling {
+        width: 100%;
+        height: max-content;
+        flex-direction: column;
+    }
+    .biling_card {
+        width: 100%;
+        height: max-content;
+    }
+    .card_main_box {
+        width: 100%;
+        height: 72px;
+        display: flex;
+    }
+    .biling-item-image {
+        width: 22%;
+        height: max-content;
+        padding-bottom: 50px;
+    }
+    .wrap_bill_info_labal{
+        height: max-content;
+        width: 70%;
+    }
+    /* step 3 */
+    .sarvive_box {
+        height: 72px;
     }
 }
