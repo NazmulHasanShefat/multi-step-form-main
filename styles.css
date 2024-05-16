@@ -2,7 +2,7 @@
 *{
     margin:0;
     padding:0;
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 body{
     background-color: var(--Light_gray);
@@ -15,7 +15,7 @@ body{
     align-items: center;
 }
 .main_content_container{
-    width: 60%;
+    width: 76%;
     height: 80vh;
     background-color: var(--White);
     display: flex;
@@ -23,17 +23,21 @@ body{
     align-items: center;
 }
 .indicators_contenr{
-    width: 25%;
+    width: 30%;
     height: 100%;
     background-image:url("./assets/images/bg-sidebar-desktop.svg");
     background-size:cover;
 }
 .input_fuld_container{
-    width: 75%;
-    height: 100%;
+    width: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+}
+.form_frame_container{
+    width: 70%;
+    height: 100%;
 }
 /* indicatiors */
 .indicator-buttons-container{
@@ -102,18 +106,21 @@ body{
 }
 /* end indicators section */
 /* start input container */
-.step_1{
+/* .step_1{
     display: none;
-}
-.form_frame_container{
-    width: 80%;
-    height: 80%;
-}
+} */
 .myForm{
     width: 100%;
     height: 100%;
     font-family: var(--heading_font);
     font-weight: 400;
+}
+.myForm2, .myForm2, .myForm3, .myForm4{
+    width: 100%;
+    height: 100%;
+    font-family: var(--heading_font);
+    font-weight: 400;
+    display: none;
 }
 .input-heading{
     width: 100%;
@@ -163,6 +170,13 @@ body{
     width: 100%;
     height: 170px;
     display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.next_button2,.next_button3{
+    width: 100%;
+    height: 170px;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -174,6 +188,27 @@ body{
     border:none;
     outline: none;
     border-radius: 8px;
+    cursor:pointer;
+}
+.next_btn2{
+    width: 110px;
+    height: 42px;
+    color:var(--White);
+    background-color: var(--Marine_blue);
+    border:none;
+    outline: none;
+    border-radius: 8px;
+    cursor:pointer;
+}
+.next_btn3{
+    width: 110px;
+    height: 42px;
+    color:var(--White);
+    background-color: var(--Marine_blue);
+    border:none;
+    outline: none;
+    border-radius: 8px;
+    cursor:pointer;
 }
 .next_btn1:hover{
     background-color: var(--Marine_blue_hover);
@@ -188,9 +223,6 @@ body{
 
 
 /* start step 2  */
-/* .setp_2{
-   display: none;
-} */
 .radio_input{
     display: none;
 }
@@ -383,7 +415,7 @@ label{
     height: 50%;
     border-bottom:1px solid var(--Light_gray);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .L3_add_price{
@@ -454,12 +486,68 @@ label{
 .L3_last_select1, .L3_last_select2, .L3_last_select3{
     display: flex;
 }
+.price_L3_price{
+    height: 60%;
+    padding-right:15px;
+    display: flex;
+    justify-content:end;
+}
 /* total */
 .total_container{
     width: 100%;
     height: max-content;
 }
+/* slide form */
 /* end step 4 */
 
 /* responsib all */
-
+@media screen and (max-width:768px) {
+    .main_content_container {
+        width: 100%;
+        height: 100%;
+        flex-direction:column;
+    }
+    .indicators_contenr {
+        width: 100%;
+        height: 100%;
+        background-image:url("./assets/images/bg-sidebar-mobile.svg");
+    }
+    .indicator-buttons-container {
+        width: 90%;
+        height: 80%;
+        margin-top: 30px;
+        margin-left: 10px;
+        display:flex;
+    }
+    .indicator_info {
+        display:none;
+    }
+    .indicator_btn_container {
+        width: 50%;
+        height: 100%;
+    }
+    .indicator_main_btn {
+        width: 50px;
+        height: 39px;
+    }
+    .input_fuld_container {
+        background-color: var(--Light_gray);
+    }
+    .form_frame_container {
+        width: 85%;
+        height: 100%;
+        display:flex;
+        justify-content: center;
+        background-color: var(--White);
+        position: relative;
+        top:-26px;
+        border-radius:30px;
+    }
+    .myForm{
+        width: 85%;
+        height: 100%;
+        font-family: var(--heading_font);
+        font-weight: 400;
+        margin-top:20px;
+    }
+}

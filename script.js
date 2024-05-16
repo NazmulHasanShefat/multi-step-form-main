@@ -16,9 +16,9 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "2 month free";
         };
         // chenge price
-        price_Low.innerHTML = `$<p id="price_low">90<p>/yr`
-        price_Advance.innerHTML = `$<p id="price_advance">120<p>/yr`
-        price_pro.innerHTML = `$<p id="price_pro">150<p>/yr`
+        price_Low.innerHTML = `<p>$</p><p id="price_low">90<p>/yr`
+        price_Advance.innerHTML = `<p>$</p><p id="price_advance">120<p>/yr`
+        price_pro.innerHTML = `<p>$</p><p id="price_pro">150<p>/yr`
 
     }
     else{
@@ -28,9 +28,9 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "";
         };
         // chenge price
-        price_Low.innerHTML = `$<p id="price_low">9<p>/mo`
-        price_Advance.innerHTML = `$<p id="price_low">12<p>/mo`
-        price_pro.innerHTML = `$<p id="price_low">15<p>/mo`
+        price_Low.innerHTML = `<p>$</p><p id="price_low">9<p>/mo`
+        price_Advance.innerHTML = `<p>$</p><p id="price_advance">12<p>/mo`
+        price_pro.innerHTML = `<p>$</p><p id="price_pro">15<p>/mo`
     }
 });
 
@@ -99,12 +99,17 @@ let bil_name2 = document.querySelector(".biling_name2");
 let bil_name3 = document.querySelector(".biling_name3");
 // dashbord
 let L2_dashBord_name_main = document.querySelector(".L2_dashBord_main_name");
+// price 
 let L2_dashBord_price = document.querySelector(".dash_L2_price");
+
+
 
 L2_bil_name1.addEventListener("click",()=>{
     if(L2_bil_name1.checked){
-       let total_bill_name = bil_name1.innerHTML
+       let total_bill_name = bil_name1.innerHTML;
        L2_dashBord_name_main.innerHTML = total_bill_name;
+       let filal_p1 = price_Low.innerHTML;
+       L2_dashBord_price.innerHTML = filal_p1;
     }
     else{
 
@@ -114,6 +119,8 @@ L2_bil_name2.addEventListener("click",()=>{
     if(L2_bil_name2.checked){
        let total_bill_name = bil_name2.innerHTML
        L2_dashBord_name_main.innerHTML = total_bill_name;
+       let filal_p2 = price_Advance.innerHTML;
+       L2_dashBord_price.innerHTML = filal_p2;
     }
     else{
 
@@ -123,8 +130,33 @@ L2_bil_name3.addEventListener("click",()=>{
     if(L2_bil_name3.checked){
        let total_bill_name = bil_name3.innerHTML
        L2_dashBord_name_main.innerHTML = total_bill_name;
+       let filal_p3 = price_pro.innerHTML;
+       L2_dashBord_price.innerHTML = filal_p3;
     }
     else{
       
     }
 });
+
+// slide form 
+let slideBtn1 = document.querySelector(".next_btn1");
+let slideBtn2 = document.querySelector(".next_btn2");
+let slideBtn3 = document.querySelector(".next_btn3");
+let slideBtn4 = document.querySelector(".next_btn4");
+let slideForm1 = document.querySelector(".step_1");
+let slideForm2 = document.querySelector(".setp_2");
+let slideForm3 = document.querySelector(".setp_3");
+let slideForm4 = document.querySelector(".setp_4");
+
+slideBtn1.addEventListener("click",()=>{
+    slideForm1.style.display = "none"
+    slideForm2.style.display = "block"
+})
+slideBtn2.addEventListener("click",()=>{
+    slideForm2.style.display = "none"
+    slideForm3.style.display = "block"
+})
+slideBtn3.addEventListener("click",()=>{
+    slideForm3.style.display = "none"
+    slideForm4.style.display = "block"
+})

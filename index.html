@@ -75,7 +75,7 @@
        <div class="input_fuld_container">
         <div class="form_frame_container">
         <!-- step 1 input -->
-        <form action="" class="myForm step_1">
+        <form action="" class="myForm step_1" onsubmit="return false">
           <div class="input-heading">
             <h1> Personal info</h1>
           </div>
@@ -115,7 +115,7 @@
 
 
         <!-- step 2 input -->
-        <form action="" class="myForm setp_2">
+        <form action="" class="myForm2 setp_2" onsubmit="return false">
           <div class="input-heading">
             <h1> Select your plan</h1>
           </div>
@@ -176,14 +176,15 @@
               <div class="yearly_text selectM_Y"><p class="Yearly_main_text">Yearly</p></div>
             </div>
 
-             <div class="next_button1"><button class="prev_btn">Go Back</button><button class="next_btn1">Next</button></div>
+             <div class="next_button2"><button class="prev_btn">Go Back</button>
+              <button class="next_btn2">Next</button></div>
           </div>
         </form>
           <!--end step 2 end-->
 
 
          <!-- step 3 -->
-         <form action="" class="myForm setp_3">
+         <form action="" class="myForm3 setp_3" onsubmit="return false">
           <div class="input-heading">
             <h1>Pick add-ons</h1>
           </div>
@@ -230,11 +231,12 @@
             </label>
             </div>
 
-             <div class="next_button1"><button class="prev_btn">Go Back</button><button class="next_btn1">Next</button></div>
+             <div class="next_button3"><button class="prev_btn">Go Back</button>
+              <button class="next_btn3">Next</button></div>
           
         </form>
          <!-- step 3 -->
-         <form action="" class="myForm setp_4">
+         <form action="" class="myForm4 setp_4" onsubmit="return false">
           <div class="input-heading">
             <h1>Finishing up</h1>
           </div>
@@ -248,7 +250,7 @@
                 <div class="L2_dashBord_main_name"><p>Arcade <span>(Monthly)</span></p></div>
                 <div class="chenge_biling_total"><a href="#">change</a></div>
               </div>
-              <div class="price_L2_price"><p>$<span class="dash_L2_price">9</span>/mo</p></div>
+              <div class="price_L3_price dash_L3_price"><p>$</p><p id="price_low">9<p>/mo</div>
             </div>
             <div class="L3_add_price">
               <div class="L3_item_name"><p>Online Sarvice</p></div>
@@ -269,15 +271,14 @@
 
 
 
-         </div><!--frame-->
+         </div>
       </div><!--fuld container-->
      
 
 
 
 
-    </div><!--main content box-->
-  </div><!--full page-->
+  </div><!--main content box-->
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
