@@ -15,7 +15,7 @@ body{
     align-items: center;
 }
 .main_content_container{
-    width: 76%;
+    width: 65%;
     height: 80vh;
     background-color: var(--White);
     display: flex;
@@ -173,7 +173,7 @@ body{
     justify-content: end;
     align-items: center;
 }
-.next_button2,.next_button3{
+.next_button2,.next_button3,.next_button4{
     width: 100%;
     height: 170px;
     display: flex;
@@ -477,9 +477,9 @@ label{
     display: flex;
     justify-content: end;
 }
-.L3_item_price p{
+/* .L3_item_price p{
     margin-right:10px;
-}
+} */
 .L3_item_name p{
     margin-left:10px;
 }
@@ -529,7 +529,7 @@ label{
     }
     .indicator_main_btn {
         width: 50px;
-        height: 39px;
+        height: 43px;
     }
     .input_fuld_container {
         background-color: var(--Light_gray);
@@ -541,7 +541,7 @@ label{
         justify-content: center;
         background-color: var(--White);
         position: relative;
-        top:-63px;
+        top:-65px;
         border-radius:30px;
     }
     .myForm, .myForm2, .myForm3, .myForm4{

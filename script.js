@@ -78,14 +78,14 @@ let last_price_select2 = document.querySelector(".L3_last_select2");
 let last_price_select3 = document.querySelector(".L3_last_select3");
 input_fuld.addEventListener("click",()=>{
     if(input_fuld.checked){
-       last_price_select1.innerHTML = `$<p id="price_low">90<p>/yr`
-       last_price_select2.innerHTML = `$<p id="price_low">10<p>/yr`
-       last_price_select3.innerHTML = `$<p id="price_low">20<p>/yr`
+       last_price_select1.innerHTML = `+$<p id="price_low">10<p>/yr`
+       last_price_select2.innerHTML = `+$<p id="price_low">20<p>/yr`
+       last_price_select3.innerHTML = `+$<p id="price_low">20<p>/yr`
     }
     else{
-        last_price_select1.innerHTML = `$<p id="price_low">9<p>/mo`
-        last_price_select2.innerHTML = `$<p id="price_low">1<p>/mo`
-        last_price_select3.innerHTML = `$<p id="price_low">2<p>/mo`
+        last_price_select1.innerHTML = `+$<p id="price_low">1<p>/mo`
+        last_price_select2.innerHTML = `+$<p id="price_low">2<p>/mo`
+        last_price_select3.innerHTML = `+$<p id="price_low">2<p>/mo`
     }
 });
 
@@ -100,7 +100,7 @@ let bil_name3 = document.querySelector(".biling_name3");
 // dashbord
 let L2_dashBord_name_main = document.querySelector(".L2_dashBord_main_name");
 // price 
-let L2_dashBord_price = document.querySelector(".dash_L2_price");
+let L2_dashBord_price = document.querySelector(".dash_L3_price");
 
 
 
@@ -138,6 +138,41 @@ L2_bil_name3.addEventListener("click",()=>{
     }
 });
 
+// pic add ons items 
+let pic_item_dash1 = document.querySelector(".create-pic-add-items1");
+let pic_item_dash2 = document.querySelector(".create-pic-add-items2");
+let pic_item_dash3 = document.querySelector(".create-pic-add-items3");
+check1.addEventListener("click",()=>{
+   if(check1.checked){
+     pic_item_dash1.innerHTML = `
+     <div class="L3_add_price">
+                <div class="L3_item_name"><p>Online Sarvice</p></div>
+                <div class="L3_item_price">${last_price_select1.innerHTML}</div>
+    </div>
+     `
+   }
+})
+check2.addEventListener("click",()=>{
+   if(check2.checked){
+     pic_item_dash2.innerHTML = `
+     <div class="L3_add_price">
+                <div class="L3_item_name"><p>Larger storage</p></div>
+                <div class="L3_item_price">${last_price_select2.innerHTML}</div>
+    </div>
+     `
+   }
+})
+check3.addEventListener("click",()=>{
+   if(check3.checked){
+     pic_item_dash3.innerHTML = `
+     <div class="L3_add_price">
+                <div class="L3_item_name"><p>Customizable Profile</p></div>
+                <div class="L3_item_price">${last_price_select3.innerHTML}</div>
+    </div>
+     `
+   }
+})
+
 // slide form 
 let slideBtn1 = document.querySelector(".next_btn1");
 let slideBtn2 = document.querySelector(".next_btn2");
@@ -147,11 +182,28 @@ let slideForm1 = document.querySelector(".step_1");
 let slideForm2 = document.querySelector(".setp_2");
 let slideForm3 = document.querySelector(".setp_3");
 let slideForm4 = document.querySelector(".setp_4");
+// all inputs
+let input_name = document.querySelector(".name").value;
+let input_email = document.querySelector(".email").value;
+let input_phone = document.querySelector(".phone").value;
+let error_name = document.querySelector(".error_text");
+let myform = document.querySelector(".myForm");
 
-slideBtn1.addEventListener("click",()=>{
-    slideForm1.style.display = "none"
-    slideForm2.style.display = "block"
-})
+let isvalid = false
+
+//  slideBtn1.addEventListener("click",()=>{
+//     // if(input_name.length<5){
+//     //    error_name.innerHTML = "*Input name requred"
+//     // }
+//     // if(input_name.length>0){
+//     //   slideForm1.style.display = "none"
+//     //   slideForm2.style.display = "block"
+//     // }
+//     console.log(input_name.length)
+// })
+
+
+
 slideBtn2.addEventListener("click",()=>{
     slideForm2.style.display = "none"
     slideForm3.style.display = "block"
