@@ -189,17 +189,21 @@ let input_phone = document.querySelector(".phone").value;
 let error_name = document.querySelector(".error_text");
 let myform = document.querySelector(".myForm");
 
-let isvalid = false
+slideBtn1.addEventListener("click",()=>{
+   console.log(input_name.length);
+})
+// slideBtn1.addEventListener("click",()=>{
+//     if(input_name.length<5){
+//        error_name.innerHTML = "*Input name requred";
+//        console.log(input_name.length)
+//        isvalid = false;
+//     }
+//     if(input_name.length>5){
+//       slideForm1.style.display = "none"
+//       slideForm2.style.display = "block"
+//     }
+//     return isvalid;
 
-//  slideBtn1.addEventListener("click",()=>{
-//     // if(input_name.length<5){
-//     //    error_name.innerHTML = "*Input name requred"
-//     // }
-//     // if(input_name.length>0){
-//     //   slideForm1.style.display = "none"
-//     //   slideForm2.style.display = "block"
-//     // }
-//     console.log(input_name.length)
 // })
 
 
