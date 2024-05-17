@@ -509,8 +509,9 @@ label{
     }
     .indicators_contenr {
         width: 100%;
-        height: 100%;
+        height: 25%;
         background-image:url("./assets/images/bg-sidebar-mobile.svg");
+        background-size:cover;
     }
     .indicator-buttons-container {
         width: 90%;
@@ -540,7 +541,7 @@ label{
         justify-content: center;
         background-color: var(--White);
         position: relative;
-        top:-26px;
+        top:-63px;
         border-radius:30px;
     }
     .myForm, .myForm2, .myForm3, .myForm4{
