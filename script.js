@@ -18,9 +18,9 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "2 month free";
         };
         // chenge price
-        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low">90<p>/yr`
-        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence">120<p>/yr`
-        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro">150<p>/yr`
+        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low last_biling">90<p>/yr`
+        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence last_biling">120</p>/yr`
+        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro last_biling">150<p>/yr`
         total_name.innerHTML = "total(per year)"
 
 
@@ -32,9 +32,9 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "";
         };
         // chenge price
-        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low">9<p>/mo`
-        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence">12<p>/mo`
-        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro">15<p>/mo`
+        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low last_biling">9</p>/mo`
+        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence last_biling">12</p>/mo`
+        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro last_biling">15</p>/mo`
         total_name.innerHTML = "total(per month)"
     }
 });
@@ -83,14 +83,14 @@ let last_price_select2 = document.querySelector(".L3_last_select2");
 let last_price_select3 = document.querySelector(".L3_last_select3");
 input_fuld.addEventListener("click",()=>{
     if(input_fuld.checked){
-       last_price_select1.innerHTML = `+$<p id="price_low">10<p>/yr`
-       last_price_select2.innerHTML = `+$<p id="price_low">20<p>/yr`
-       last_price_select3.innerHTML = `+$<p id="price_low">20<p>/yr`
+       last_price_select1.innerHTML = `+$<p id="price_lo">10<p>/yr`
+       last_price_select2.innerHTML = `+$<p id="price_ad">20<p>/yr`
+       last_price_select3.innerHTML = `+$<p id="price_pr">20<p>/yr`
     }
     else{
-        last_price_select1.innerHTML = `+$<p id="price_low">1<p>/mo`
-        last_price_select2.innerHTML = `+$<p id="price_low">2<p>/mo`
-        last_price_select3.innerHTML = `+$<p id="price_low">2<p>/mo`
+        last_price_select1.innerHTML = `+$<p id="price_lo">1<p>/mo`
+        last_price_select2.innerHTML = `+$<p id="price_ad">2<p>/mo`
+        last_price_select3.innerHTML = `+$<p id="price_pr">2<p>/mo`
     }
 });
 
@@ -256,3 +256,19 @@ back_btn3.addEventListener("click",()=>{
 })
 
 // total calculation 
+// let M_Y_biling_amount = document.querySelector(".last_biling");
+// let M_Y_biling_amount_adv = document.querySelector(".advence");
+// let M_Y_biling_amount_pro = document.querySelector(".pro");
+// select onece
+// let price_select_onece_low = document.querySelector(".price_lo");
+// let price_select_onece_adv = document.querySelector(".price_ad");
+// let price_select_onece_pro = document.querySelector(".price_pr");
+// slideBtn2.addEventListener("click",()=>{
+//   let total_bil = M_Y_biling_amount.innerHTML;
+//   alert(total_bil);
+// })
+
+
+
+
+
