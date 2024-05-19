@@ -206,6 +206,12 @@ check1.addEventListener("click",()=>{
       Last_M_Y.style.display = "block";
       dolar_sign.style.display = "block";
    }
+   else{
+      pic_item_dash1.innerHTML = "";
+      dash_Item_name1.innerHTML = "";
+      Last_M_Y.style.display = "none";
+      dolar_sign.style.display = "none";
+   }
 })
 check2.addEventListener("click",()=>{
    if(check2.checked){
@@ -214,6 +220,12 @@ check2.addEventListener("click",()=>{
     Last_M_Y2.style.display = "block";
     dolar_sign2.style.display = "block";
    }
+   else{
+    pic_item_dash2.innerHTML = "";
+    dash_Item_name2.innerHTML = "";
+    Last_M_Y2.style.display = "none";
+    dolar_sign2.style.display = "none";
+   }
 })
 check3.addEventListener("click",()=>{
    if(check3.checked){
@@ -221,6 +233,12 @@ check3.addEventListener("click",()=>{
     dash_Item_name3.innerHTML = "Customizable Profile";
     Last_M_Y3.style.display = "block";
     dolar_sign3.style.display = "block";
+   }
+   else{
+    pic_item_dash3.innerHTML = "";
+    dash_Item_name3.innerHTML = "";
+    Last_M_Y3.style.display = "none";
+    dolar_sign3.style.display = "none";
    }
 })
 
@@ -310,6 +328,3 @@ let last_btn = document.querySelector(".next_btn4");
 let price_select_onece_low = document.querySelector(".price_lo");
 let price_select_onece_adv = document.querySelector(".price_ad");
 let price_select_onece_pro = document.querySelector(".price_pr");
-last_btn.addEventListener("click",()=>{
-    
-})
