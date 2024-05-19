@@ -7,6 +7,8 @@ let price_Low = document.querySelector(".biling-item-price_Ar");
 let price_Advance = document.querySelector(".biling-item-price_A");
 let price_pro = document.querySelector(".biling-item-price_pro");
 // end billing price
+// total name add
+let total_name = document.querySelector(".total_name_text");
 
 input_fuld.addEventListener("click",()=>{
     if(input_fuld.checked){
@@ -16,9 +18,11 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "2 month free";
         };
         // chenge price
-        price_Low.innerHTML = `<p>$</p><p id="price_low">90<p>/yr`
-        price_Advance.innerHTML = `<p>$</p><p id="price_advance">120<p>/yr`
-        price_pro.innerHTML = `<p>$</p><p id="price_pro">150<p>/yr`
+        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low">90<p>/yr`
+        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence">120<p>/yr`
+        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro">150<p>/yr`
+        total_name.innerHTML = "total(per year)"
+
 
     }
     else{
@@ -28,9 +32,10 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "";
         };
         // chenge price
-        price_Low.innerHTML = `<p>$</p><p id="price_low">9<p>/mo`
-        price_Advance.innerHTML = `<p>$</p><p id="price_advance">12<p>/mo`
-        price_pro.innerHTML = `<p>$</p><p id="price_pro">15<p>/mo`
+        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low">9<p>/mo`
+        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence">12<p>/mo`
+        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro">15<p>/mo`
+        total_name.innerHTML = "total(per month)"
     }
 });
 
@@ -146,8 +151,8 @@ check1.addEventListener("click",()=>{
    if(check1.checked){
      pic_item_dash1.innerHTML = `
      <div class="L3_add_price">
-                <div class="L3_item_name"><p>Online Sarvice</p></div>
-                <div class="L3_item_price">${last_price_select1.innerHTML}</div>
+        <div class="L3_item_name"><p>Online Sarvice</p></div>
+        <div class="L3_item_price">${last_price_select1.innerHTML}</div>
     </div>
      `
    }
@@ -156,8 +161,8 @@ check2.addEventListener("click",()=>{
    if(check2.checked){
      pic_item_dash2.innerHTML = `
      <div class="L3_add_price">
-                <div class="L3_item_name"><p>Larger storage</p></div>
-                <div class="L3_item_price">${last_price_select2.innerHTML}</div>
+       <div class="L3_item_name"><p>Larger storage</p></div>
+       <div class="L3_item_price">${last_price_select2.innerHTML}</div>
     </div>
      `
    }
@@ -166,8 +171,8 @@ check3.addEventListener("click",()=>{
    if(check3.checked){
      pic_item_dash3.innerHTML = `
      <div class="L3_add_price">
-                <div class="L3_item_name"><p>Customizable Profile</p></div>
-                <div class="L3_item_price">${last_price_select3.innerHTML}</div>
+       <div class="L3_item_name"><p>Customizable Profile</p></div>
+       <div class="L3_item_price">${last_price_select3.innerHTML}</div>
     </div>
      `
    }
@@ -237,3 +242,17 @@ slideBtn3.addEventListener("click",()=>{
     slideForm4.style.display = "block";
 })
 
+back_btn1.addEventListener("click",()=>{
+    slideForm1.style.display = "block";
+    slideForm2.style.display = "none";
+})
+back_btn2.addEventListener("click",()=>{
+    slideForm2.style.display = "block";
+    slideForm3.style.display = "none";
+})
+back_btn3.addEventListener("click",()=>{
+    slideForm3.style.display = "block";
+    slideForm4.style.display = "none";
+})
+
+// total calculation 

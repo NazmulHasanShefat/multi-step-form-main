@@ -581,3 +581,25 @@ label{
         height: 72px;
     }
 }
+/* total*/
+.total_container{
+    width: 100%;
+    height:30px;
+    border:1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:0 8px;
+    font-family: var(--heading_font);
+    color:var(--Cool_gray);
+}
+.total_name{
+    width: 50%;
+    height: 100%;
+}
+.total_amount{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+}
