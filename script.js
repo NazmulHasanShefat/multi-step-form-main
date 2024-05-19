@@ -256,19 +256,15 @@ back_btn3.addEventListener("click",()=>{
 })
 
 // total calculation 
-// let M_Y_biling_amount = document.querySelector(".last_biling");
-// let M_Y_biling_amount_adv = document.querySelector(".advence");
-// let M_Y_biling_amount_pro = document.querySelector(".pro");
+let M_Y_biling_amount = document.querySelector(".last_biling");
+let M_Y_biling_amount_adv = document.querySelector(".advence");
+let M_Y_biling_amount_pro = document.querySelector(".pro");
+let last_btn = document.querySelector(".next_btn4");
 // select onece
-// let price_select_onece_low = document.querySelector(".price_lo");
-// let price_select_onece_adv = document.querySelector(".price_ad");
-// let price_select_onece_pro = document.querySelector(".price_pr");
-// slideBtn2.addEventListener("click",()=>{
-//   let total_bil = M_Y_biling_amount.innerHTML;
-//   alert(total_bil);
-// })
-
-
-
-
-
+let price_select_onece_low = document.querySelector(".price_lo");
+let price_select_onece_adv = document.querySelector(".price_ad");
+let price_select_onece_pro = document.querySelector(".price_pr");
+last_btn.addEventListener("click",()=>{
+  let total_bil = M_Y_biling_amount.innerHTML;
+  alert(total_bil);
+})
