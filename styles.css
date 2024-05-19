@@ -597,6 +597,12 @@ label{
     width: 50%;
     height: 100%;
 }
+.Last_M_Y1,.Last_M_Y2,.Last_M_Y3{
+    display: none;
+}
+.dolar_sign,.dolar_sign2,.dolar_sign3{
+    display: none;
+}
 .total_amount{
     width: 50%;
     height: 100%;

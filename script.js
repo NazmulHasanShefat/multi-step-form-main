@@ -178,37 +178,49 @@ L2_bil_name3.addEventListener("click",()=>{
 });
 
 // pic add ons items 
-let pic_item_dash1 = document.querySelector(".create-pic-add-items1");
-let pic_item_dash2 = document.querySelector(".create-pic-add-items2");
-let pic_item_dash3 = document.querySelector(".create-pic-add-items3");
+// let pic_item_dash1 = document.querySelector(".create-pic-add-items1");
+// let pic_item_dash2 = document.querySelector(".create-pic-add-items2");
+// let pic_item_dash3 = document.querySelector(".create-pic-add-items3");
+
+let pic_item_dash1 = document.querySelector(".Selected_last_amount1");
+let pic_item_dash2 = document.querySelector(".Selected_last_amount2");
+let pic_item_dash3 = document.querySelector(".Selected_last_amount3");
+let dash_Item_name1 = document.querySelector(".add_item1");
+let dash_Item_name2 = document.querySelector(".add_item2");
+let dash_Item_name3 = document.querySelector(".add_item3");
+
+let Last_M_Y = document.querySelector(".Last_M_Y1")
+let Last_M_Y2 = document.querySelector(".Last_M_Y2")
+let Last_M_Y3 = document.querySelector(".Last_M_Y3")
+
+let dolar_sign = document.querySelector(".dolar_sign");
+let dolar_sign2 = document.querySelector(".dolar_sign2");
+let dolar_sign3 = document.querySelector(".dolar_sign3");
+
+
+
 check1.addEventListener("click",()=>{
    if(check1.checked){
-     pic_item_dash1.innerHTML = `
-     <div class="L3_add_price">
-        <div class="L3_item_name"><p>Online Sarvice</p></div>
-        <div class="L3_item_price">${last_price_select1.innerHTML}</div>
-    </div>
-     `
+      pic_item_dash1.innerHTML = last_price_select1.innerHTML;
+      dash_Item_name1.innerHTML = "Online service";
+      Last_M_Y.style.display = "block";
+      dolar_sign.style.display = "block";
    }
 })
 check2.addEventListener("click",()=>{
    if(check2.checked){
-     pic_item_dash2.innerHTML = `
-     <div class="L3_add_price">
-       <div class="L3_item_name"><p>Larger storage</p></div>
-       <div class="L3_item_price">${last_price_select2.innerHTML}</div>
-    </div>
-     `
+    pic_item_dash2.innerHTML = last_price_select2.innerHTML;
+    dash_Item_name2.innerHTML = "Larger storage";
+    Last_M_Y2.style.display = "block";
+    dolar_sign2.style.display = "block";
    }
 })
 check3.addEventListener("click",()=>{
    if(check3.checked){
-     pic_item_dash3.innerHTML = `
-     <div class="L3_add_price">
-       <div class="L3_item_name"><p>Customizable Profile</p></div>
-       <div class="L3_item_price">${last_price_select3.innerHTML}</div>
-    </div>
-     `
+    pic_item_dash3.innerHTML = last_price_select3.innerHTML;
+    dash_Item_name3.innerHTML = "Customizable Profile";
+    Last_M_Y3.style.display = "block";
+    dolar_sign3.style.display = "block";
    }
 })
 
