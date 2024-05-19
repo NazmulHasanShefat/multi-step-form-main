@@ -3,11 +3,21 @@ let year = document.querySelector(".Yearly_main_text");
 let input_fuld = document.querySelector(".my_check_L2");
 let free_text = document.querySelectorAll(".biling-item-free");
 // biling price
-let price_Low = document.querySelector(".biling-item-price_Ar");
-let price_Advance = document.querySelector(".biling-item-price_A");
-let price_pro = document.querySelector(".biling-item-price_pro");
+
+// let price_Low = document.querySelector(".biling-item-price_Ar");
+// let price_Advance = document.querySelector(".biling-item-price_A");
+// let price_pro = document.querySelector(".biling-item-price_pro");
+
+let price_Low = document.querySelector(".Low");
+let price_Low_yr_mo = document.querySelector(".per_yer_month");
+let price_Low_yr_mo_A = document.querySelector(".per_yer_month_A");
+let price_Low_yr_mo_p = document.querySelector(".per_yer_month_p");
+let price_Advance = document.querySelector(".advence");
+let price_pro = document.querySelector(".pro");
+
 // end billing price
 // total name add
+let dash_per_Mo_Yr = document.querySelector(".dash_per_M_Y");
 let total_name = document.querySelector(".total_name_text");
 
 input_fuld.addEventListener("click",()=>{
@@ -18,10 +28,17 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "2 month free";
         };
         // chenge price
-        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low last_biling">90<p>/yr`
-        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence last_biling">120</p>/yr`
-        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro last_biling">150<p>/yr`
-        total_name.innerHTML = "total(per year)"
+        price_Low.innerHTML = `90`;
+        price_Low_yr_mo.innerHTML=`/yr`;
+
+        price_Advance.innerHTML = `120`;
+        price_Low_yr_mo_A.innerHTML = `/yr`
+
+        price_pro.innerHTML = `150`
+        price_Low_yr_mo_p = `/yr`;
+        
+        dash_per_Mo_Yr.innerHTML = `/yr`
+        total_name.innerHTML = "total(per year)";
 
 
     }
@@ -32,10 +49,17 @@ input_fuld.addEventListener("click",()=>{
             free_text[i].innerHTML = "";
         };
         // chenge price
-        price_Low.innerHTML = `<p>$</p><p id="price_low" class="Low last_biling">9</p>/mo`
-        price_Advance.innerHTML = `<p>$</p><p id="price_advance" class="advence last_biling">12</p>/mo`
-        price_pro.innerHTML = `<p>$</p><p id="price_pro" class="pro last_biling">15</p>/mo`
-        total_name.innerHTML = "total(per month)"
+        price_Low.innerHTML = `9`;
+        price_Low_yr_mo.innerHTML=`/mo`;
+
+        price_Advance.innerHTML = `12`;
+        price_Low_yr_mo_A.innerHTML = `/mo`;
+
+        price_pro.innerHTML = `15`;
+        price_Low_yr_mo_p = `/mo`;
+        
+        dash_per_Mo_Yr.innerHTML = `/mo`
+        total_name.innerHTML = "total(per month)";
     }
 });
 
@@ -55,6 +79,7 @@ check1.addEventListener("click",()=>{
     }
     else{
         service1.style.backgroundColor = "";
+        service1.style.borderColor = "";
     }
 });
 check2.addEventListener("click",()=>{
@@ -63,7 +88,8 @@ check2.addEventListener("click",()=>{
         service2.style.borderColor = "hsl(243, 100%, 62%)";
     }
     else{
-        service1.style.backgroundColor = "";
+        service2.style.backgroundColor = "";
+        service2.style.borderColor = "";
     }
 });
 check3.addEventListener("click",()=>{
@@ -72,25 +98,33 @@ check3.addEventListener("click",()=>{
         service3.style.borderColor = "hsl(243, 100%, 62%)";
     }
     else{
-        service1.style.backgroundColor = "";
+        service3.style.backgroundColor = "";
+        service3.style.borderColor = "";
     }
 });
 // end step 3 all
 
 // step transfar value step 3 
-let last_price_select1 = document.querySelector(".L3_last_select1");
-let last_price_select2 = document.querySelector(".L3_last_select2");
-let last_price_select3 = document.querySelector(".L3_last_select3");
+let last_price_select1 = document.querySelector("#price_low_Lst");
+let last_price_select2 = document.querySelector("#price_adv_Last");
+let last_price_select3 = document.querySelector("#price_pro_Last");
+let Last_select_M_Y = document.querySelectorAll(".Last_select_M_Y");
 input_fuld.addEventListener("click",()=>{
     if(input_fuld.checked){
-       last_price_select1.innerHTML = `+$<p id="price_lo">10<p>/yr`
-       last_price_select2.innerHTML = `+$<p id="price_ad">20<p>/yr`
-       last_price_select3.innerHTML = `+$<p id="price_pr">20<p>/yr`
+        for(let i=0; i<Last_select_M_Y.length; i++){
+            Last_select_M_Y[i].innerHTML = "/yr"
+        };
+        last_price_select1.innerHTML = `10`
+        last_price_select2.innerHTML = `20`
+        last_price_select3.innerHTML = `20`
     }
     else{
-        last_price_select1.innerHTML = `+$<p id="price_lo">1<p>/mo`
-        last_price_select2.innerHTML = `+$<p id="price_ad">2<p>/mo`
-        last_price_select3.innerHTML = `+$<p id="price_pr">2<p>/mo`
+        for(let i=0; i<Last_select_M_Y.length; i++){
+            Last_select_M_Y[i].innerHTML = "/mo"
+        };
+        last_price_select1.innerHTML = `1`
+        last_price_select2.innerHTML = `2`
+        last_price_select3.innerHTML = `2`
     }
 });
 
@@ -117,7 +151,7 @@ L2_bil_name1.addEventListener("click",()=>{
        L2_dashBord_price.innerHTML = filal_p1;
     }
     else{
-
+        
     }
 });
 L2_bil_name2.addEventListener("click",()=>{
@@ -128,7 +162,7 @@ L2_bil_name2.addEventListener("click",()=>{
        L2_dashBord_price.innerHTML = filal_p2;
     }
     else{
-
+        
     }
 });
 L2_bil_name3.addEventListener("click",()=>{
@@ -139,7 +173,7 @@ L2_bil_name3.addEventListener("click",()=>{
        L2_dashBord_price.innerHTML = filal_p3;
     }
     else{
-      
+        
     }
 });
 
@@ -256,7 +290,7 @@ back_btn3.addEventListener("click",()=>{
 })
 
 // total calculation 
-let M_Y_biling_amount = document.querySelector(".last_biling");
+// let M_Y_biling_amount = document.querySelector(".last_biling");
 let M_Y_biling_amount_adv = document.querySelector(".advence");
 let M_Y_biling_amount_pro = document.querySelector(".pro");
 let last_btn = document.querySelector(".next_btn4");
@@ -265,6 +299,5 @@ let price_select_onece_low = document.querySelector(".price_lo");
 let price_select_onece_adv = document.querySelector(".price_ad");
 let price_select_onece_pro = document.querySelector(".price_pr");
 last_btn.addEventListener("click",()=>{
-  let total_bil = M_Y_biling_amount.innerHTML;
-  alert(total_bil);
+    
 })
