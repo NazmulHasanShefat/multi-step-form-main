@@ -476,6 +476,7 @@ label{
     padding: 5px 0;
     display: flex;
     justify-content: end;
+    padding-right:15px;
 }
 /* .L3_item_price p{
     margin-right:10px;

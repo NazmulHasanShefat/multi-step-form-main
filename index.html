@@ -75,7 +75,7 @@
        <div class="input_fuld_container">
         <div class="form_frame_container">
         <!-- step 1 input -->
-        <form action="" class="myForm step_1" onsubmit="return false">
+        <form action="" class="myForm step_1" name="my_form_1" onsubmit="return myvalidationA()">
           <div class="input-heading">
             <h1> Personal info</h1>
           </div>
@@ -89,23 +89,23 @@
                 <div class="labals"><label for="name">Name</label></div>
                 <div class="error_massage"><p class="error_text"></p></div>
               </div>
-              <input type="text" class="name all-input-3" id="name" name="name" placeholder="e.g. Stephen King">
+              <input type="text" class="name all-input-3" name="name" placeholder="e.g. Stephen King">
              </div>
 
              <div class="input_items">
               <div class="names_container">
                 <div class="labals"><label for="name">Email Address</label></div>
-                <div class="error_massage"><p>*input fuld requred</p></div>
+                <div class="error_massage"><p class="error_email"></p></div>
               </div>
-              <input type="text" class="name email all-input-3" id="name" placeholder="e.g. stephenking@lorem.com">
+              <input type="email" class="name email all-input-3" name="M-email" placeholder="e.g. stephenking@lorem.com">
              </div>
 
              <div class="input_items">
               <div class="names_container">
                 <div class="labals"><label for="name">Phone Number</label></div>
-                <div class="error_massage"><p>*input fuld requred</p></div>
+                <div class="error_massage"><p class="error_phone"></p></div>
               </div>
-              <input type="text" class="name phone all-input-3" id="name" placeholder="e.g.1 234 567 890">
+              <input type="text" class="name phone all-input-3" name="phone" placeholder="e.g.1 234 567 890">
              </div>
 
              <div class="next_button1"><button class="next_btn1">Next</button></div>
@@ -182,7 +182,7 @@
               <div class="yearly_text selectM_Y"><p class="Yearly_main_text">Yearly</p></div>
             </div>
 
-             <div class="next_button2"><button class="prev_btn">Go Back</button>
+             <div class="next_button2"><button class="prev_btn prev_btn1">Go Back</button>
               <button class="next_btn2">Next</button></div>
           </div>
         </form>
@@ -237,7 +237,7 @@
             </label>
             </div>
 
-             <div class="next_button3"><button class="prev_btn">Go Back</button>
+             <div class="next_button3"><button class="prev_btn prev_btn2">Go Back</button>
               <button class="next_btn3">Next</button></div>
           
         </form>
@@ -285,7 +285,7 @@
            <div class="total_container"></div>
             </div>
 
-             <div class="next_button4"><button class="prev_btn">Go Back</button>
+             <div class="next_button4"><button class="prev_btn prev_btn3">Go Back</button>
               <button class="next_btn1">Next</button></div>
           </div>
         </form>

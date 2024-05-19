@@ -174,35 +174,66 @@ check3.addEventListener("click",()=>{
 })
 
 // slide form 
+// next buttons
 let slideBtn1 = document.querySelector(".next_btn1");
 let slideBtn2 = document.querySelector(".next_btn2");
 let slideBtn3 = document.querySelector(".next_btn3");
 let slideBtn4 = document.querySelector(".next_btn4");
+// back buttons
+let back_btn1 = document.querySelector(".prev_btn1");
+let back_btn2 = document.querySelector(".prev_btn2");
+let back_btn3 = document.querySelector(".prev_btn3");
+// form slide 
 let slideForm1 = document.querySelector(".step_1");
 let slideForm2 = document.querySelector(".setp_2");
 let slideForm3 = document.querySelector(".setp_3");
 let slideForm4 = document.querySelector(".setp_4");
 // all inputs
-let input_name = document.querySelector(".name").value;
-let input_email = document.querySelector(".email").value;
-let input_phone = document.querySelector(".phone").value;
+let input_name = document.querySelector(".name");
+let input_email = document.querySelector(".email");
+let input_phone = document.querySelector(".phone");
 let error_name = document.querySelector(".error_text");
-let myform = document.querySelector(".myForm");
+let error_email = document.querySelector(".error_email");
+let error_phone = document.querySelector(".error_phone");
 
+// validation 1 
+function myvalidationA(){
+    let isvalid = true;
+    var name = document.forms["my_form_1"]["name"].value;
+    if(name.length<3){
+        error_name.innerHTML = "*This fuld is requred";
+        input_name.style.borderColor = "red";
+        isvalid = false;
+    }
+    
+    var email = document.forms["my_form_1"]["M-email"].value;
+    if(email.length<5){
+        error_email.innerHTML = "*This fuld is requred";
+        input_email.style.borderColor = "red";
+        isvalid = false;
+    }
+    var phone = document.forms["my_form_1"]["phone"].value;
+    if(phone.length<10){
+        error_phone.innerHTML = "*This fuld is requred";
+        input_phone.style.borderColor = "red";
+        isvalid = false;
+    }
+    
+    if(phone.length>10 && email.length>5 && name.length>3){
+        slideForm1.style.display = "none";
+        slideForm2.style.display = "block";
+        isvalid = false;
+    }
+    return isvalid;
 
-slideBtn1.addEventListener("click",()=>{
-      slideForm1.style.display = "none"
-      slideForm2.style.display = "block"
-
-})
-
-
-
+}
+// end validation 1 
 slideBtn2.addEventListener("click",()=>{
-    slideForm2.style.display = "none"
-    slideForm3.style.display = "block"
+    slideForm2.style.display = "none";
+    slideForm3.style.display = "block";
 })
 slideBtn3.addEventListener("click",()=>{
-    slideForm3.style.display = "none"
-    slideForm4.style.display = "block"
+    slideForm3.style.display = "none";
+    slideForm4.style.display = "block";
 })
+
