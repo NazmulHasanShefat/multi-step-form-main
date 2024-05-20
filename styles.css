@@ -181,6 +181,30 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+@media screen and (max-width:440px) {
+    .next_button1{
+        width: 138%;
+        height: 80px;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        position: relative;
+        bottom: -220px;
+        background-color: white;
+        left: -51px;
+    }
+    .next_button2, .next_button3, .next_button4{
+        width: 138%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        bottom: -220px;
+        background-color: white;
+        left: -51px;
+    }
+}
 .next_btn1{
     width: 110px;
     height: 42px;
@@ -189,6 +213,7 @@ body{
     border:none;
     outline: none;
     border-radius: 8px;
+    margin-right:20px;
     cursor:pointer;
 }
 .next_btn2,.next_btn3{
@@ -200,6 +225,7 @@ body{
     outline: none;
     border-radius: 8px;
     cursor:pointer;
+    margin-right:20px;
 }
 .next_btn4{
     width: 110px;
@@ -210,6 +236,7 @@ body{
     outline: none;
     border-radius: 8px;
     cursor:pointer;
+    margin-right:20px;
 }
 .next_btn1:hover{
     background-color: var(--Marine_blue_hover);
