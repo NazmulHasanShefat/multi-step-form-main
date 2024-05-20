@@ -193,8 +193,6 @@ let dolar_sign = document.querySelector(".dolar_sign");
 let dolar_sign2 = document.querySelector(".dolar_sign2");
 let dolar_sign3 = document.querySelector(".dolar_sign3");
 
-
-
 check1.addEventListener("click",()=>{
    if(check1.checked){
       pic_item_dash1.innerHTML = last_price_select1.innerHTML;
@@ -236,8 +234,35 @@ check3.addEventListener("click",()=>{
     Last_M_Y3.style.display = "none";
     dolar_sign3.style.display = "none";
    }
-})
+});
 
+// // window onload function 
+// window.onload = ()=>{
+//     // transfre plane price in dashbord
+//     // pic onece selector color
+//     if(check1.checked){
+//         service1.style.backgroundColor = "hsl(217, 100%, 97%)";
+//         service1.style.borderColor = "hsl(243, 100%, 62%)";
+//     }
+//     else{
+//         service1.style.backgroundColor = "";
+//         service1.style.borderColor = "";
+//     }
+    
+//     // transfer pic item perce or name
+//     if(check1.checked){
+//         pic_item_dash1.innerHTML = last_price_select1.innerHTML;
+//         dash_Item_name1.innerHTML = "Online service";
+//         Last_M_Y.style.display = "block";
+//         dolar_sign.style.display = "block";
+//      }
+//      else{
+//         pic_item_dash1.innerHTML = "";
+//         dash_Item_name1.innerHTML = "";
+//         Last_M_Y.style.display = "none";
+//         dolar_sign.style.display = "none";
+//      }
+//     }
 // slide form 
 // next buttons
 let slideBtn1 = document.querySelector(".next_btn1");
@@ -315,6 +340,7 @@ back_btn3.addEventListener("click",()=>{
     slideForm4.style.display = "none";
 })
 
+// window onload function
 // total calculation 
 // let M_Y_biling_amount = document.querySelector(".last_biling");
 let Last_plan_amount = document.querySelector(".dash_L3_price");
@@ -335,12 +361,55 @@ last_btn.addEventListener("click",()=>{
        let total_p = parseInt(Price_frist) + parseInt(Price_1);
        total_amount.innerHTML = total_p;
     }
+    if(check2.checked){
+       let total_p = parseInt(Price_frist) + parseInt(Price_2);
+       total_amount.innerHTML = total_p;
+    }
+    if(check3.checked){
+       let total_p = parseInt(Price_frist) + parseInt(Price_3);
+       total_amount.innerHTML = total_p;
+    }
     if(check1.checked && check2.checked){
-       let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2);
-       total_amount.innerHTML = total_p; 
+        let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2);
+        total_amount.innerHTML = total_p; 
+    }
+    if(check1.checked || check3.checked){
+        let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_3);
+        total_amount.innerHTML = total_p; 
+    }
+    if(check2.checked && check3.checked){
+        let total_p = parseInt(Price_frist) + parseInt(Price_2) + parseInt(Price_3);
+        total_amount.innerHTML = total_p; 
     }
     if(check1.checked && check2.checked && check3.checked){
-       let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2) +parseInt(Price_3);
-       total_amount.innerHTML = total_p; 
+        let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2) +parseInt(Price_3);
+        total_amount.innerHTML = total_p; 
     }
 })
+
+    window.onload = ()=>{
+    // transfre plane price in dashbord
+    // pic onece selector color
+    if(check1.checked){
+        service1.style.backgroundColor = "hsl(217, 100%, 97%)";
+        service1.style.borderColor = "hsl(243, 100%, 62%)";
+    }
+    else{
+        service1.style.backgroundColor = "";
+        service1.style.borderColor = "";
+    }
+    
+    // transfer pic item perce or name
+    if(check1.checked){
+        pic_item_dash1.innerHTML = last_price_select1.innerHTML;
+        dash_Item_name1.innerHTML = "Online service";
+        Last_M_Y.style.display = "block";
+        dolar_sign.style.display = "block";
+     }
+     else{
+        pic_item_dash1.innerHTML = "";
+        dash_Item_name1.innerHTML = "";
+        Last_M_Y.style.display = "none";
+        dolar_sign.style.display = "none";
+     }
+    }
