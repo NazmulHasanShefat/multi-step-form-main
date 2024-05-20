@@ -380,17 +380,15 @@ label{
 .sarvive_box{
     width: 100%;
     height: 60px;
-    /* background-color: var(--Magnolia); */
     border:1px solid var(--Cool_gray);
     margin-top:13px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    cursor: pointer;
 }
 .sarvive_box:hover{
-    border:1px solid var(--Purplish_blue)
+    border:1px solid var(--Purplish_blue);
 }
 .check_box{
     width: 10%;
@@ -612,6 +610,7 @@ label{
         height: 72px;
     }
 }
+
 /* total*/
 .total_container{
     width: 100%;
