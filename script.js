@@ -15,6 +15,11 @@ let price_Low_yr_mo_p = document.querySelector(".per_yer_month_p");
 let price_Advance = document.querySelector(".advence");
 let price_pro = document.querySelector(".pro");
 
+// rodio input
+let radio1 = document.querySelector(".redio");
+let radio2 = document.querySelector(".redi2");
+let radio3 = document.querySelector(".redi3");
+
 // end billing price
 // total name add
 let dash_per_Mo_Yr = document.querySelector(".dash_per_M_Y");
@@ -150,31 +155,22 @@ L2_bil_name1.addEventListener("click",()=>{
        let filal_p1 = price_Low.innerHTML;
        L2_dashBord_price.innerHTML = filal_p1;
     }
-    else{
-        
-    }
 });
 L2_bil_name2.addEventListener("click",()=>{
     if(L2_bil_name2.checked){
-       let total_bill_name = bil_name2.innerHTML
-       L2_dashBord_name_main.innerHTML = total_bill_name;
-       let filal_p2 = price_Advance.innerHTML;
-       L2_dashBord_price.innerHTML = filal_p2;
-    }
-    else{
-        
-    }
+        let total_bill_name = bil_name2.innerHTML
+        L2_dashBord_name_main.innerHTML = total_bill_name;
+        let filal_p2 = price_Advance.innerHTML;
+        L2_dashBord_price.innerHTML = filal_p2;
+     }
 });
 L2_bil_name3.addEventListener("click",()=>{
     if(L2_bil_name3.checked){
-       let total_bill_name = bil_name3.innerHTML
-       L2_dashBord_name_main.innerHTML = total_bill_name;
-       let filal_p3 = price_pro.innerHTML;
-       L2_dashBord_price.innerHTML = filal_p3;
-    }
-    else{
-        
-    }
+        let total_bill_name = bil_name3.innerHTML
+        L2_dashBord_name_main.innerHTML = total_bill_name;
+        let filal_p3 = price_pro.innerHTML;
+        L2_dashBord_price.innerHTML = filal_p3;
+     }
 });
 
 // pic add ons items 
@@ -321,10 +317,30 @@ back_btn3.addEventListener("click",()=>{
 
 // total calculation 
 // let M_Y_biling_amount = document.querySelector(".last_biling");
-let M_Y_biling_amount_adv = document.querySelector(".advence");
-let M_Y_biling_amount_pro = document.querySelector(".pro");
+let Last_plan_amount = document.querySelector(".dash_L3_price");
 let last_btn = document.querySelector(".next_btn4");
 // select onece
-let price_select_onece_low = document.querySelector(".price_lo");
-let price_select_onece_adv = document.querySelector(".price_ad");
-let price_select_onece_pro = document.querySelector(".price_pr");
+let Last_selected_amoutunt1 = document.querySelector(".Selected_last_amount1");
+let Last_selected_amoutunt2 = document.querySelector(".Selected_last_amount2");
+let Last_selected_amoutunt3 = document.querySelector(".Selected_last_amount2");
+let total_amount = document.querySelector(".total_amount");
+
+last_btn.addEventListener("click",()=>{
+    let Price_frist = Last_plan_amount.innerHTML;
+    let Price_1 = Last_selected_amoutunt1.innerHTML;
+    let Price_2 = Last_selected_amoutunt2.innerHTML;
+    let Price_3 = Last_selected_amoutunt3.innerHTML;
+    // convert string to number use (parseInt)
+    if(check1.checked){
+       let total_p = parseInt(Price_frist) + parseInt(Price_1);
+       total_amount.innerHTML = total_p;
+    }
+    if(check1.checked && check2.checked){
+       let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2);
+       total_amount.innerHTML = total_p; 
+    }
+    if(check1.checked && check2.checked && check3.checked){
+       let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2) +parseInt(Price_3);
+       total_amount.innerHTML = total_p; 
+    }
+})
