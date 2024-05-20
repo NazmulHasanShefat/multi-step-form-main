@@ -348,47 +348,49 @@ let last_btn = document.querySelector(".next_btn4");
 // select onece
 let Last_selected_amoutunt1 = document.querySelector(".Selected_last_amount1");
 let Last_selected_amoutunt2 = document.querySelector(".Selected_last_amount2");
-let Last_selected_amoutunt3 = document.querySelector(".Selected_last_amount2");
+let Last_selected_amoutunt3 = document.querySelector(".Selected_last_amount3");
 let total_amount = document.querySelector(".total_amount");
 
 last_btn.addEventListener("click",()=>{
-    let Price_frist = Last_plan_amount.innerHTML;
-    let Price_1 = Last_selected_amoutunt1.innerHTML;
-    let Price_2 = Last_selected_amoutunt2.innerHTML;
-    let Price_3 = Last_selected_amoutunt3.innerHTML;
-    // convert string to number use (parseInt)
+    let Price_frist = parseInt(Last_plan_amount.innerHTML);
+    let price_1 = parseInt(Last_selected_amoutunt1.innerHTML);
+    let price_2 = parseInt(Last_selected_amoutunt2.innerHTML);
+    let price_3 = parseInt(Last_selected_amoutunt3.innerHTML);
+    // convert string to number use (parseInt) 
     if(check1.checked){
-       let total_p = parseInt(Price_frist) + parseInt(Price_1);
-       total_amount.innerHTML = total_p;
+       let total_pri1 = Price_frist + price_1;
+       total_amount.innerHTML = total_pri1;
     }
     if(check2.checked){
-       let total_p = parseInt(Price_frist) + parseInt(Price_2);
-       total_amount.innerHTML = total_p;
+       let total_pri2 = Price_frist + price_2;
+       total_amount.innerHTML = total_pri2;
     }
     if(check3.checked){
-       let total_p = parseInt(Price_frist) + parseInt(Price_3);
-       total_amount.innerHTML = total_p;
-    }
+        let total_pri3 = Price_frist + price_3;
+        total_amount.innerHTML = total_pri3;
+     }
     if(check1.checked && check2.checked){
-        let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2);
-        total_amount.innerHTML = total_p; 
-    }
-    if(check1.checked || check3.checked){
-        let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_3);
-        total_amount.innerHTML = total_p; 
+       let total_pri4 = Price_frist + price_1 + price_2;
+       total_amount.innerHTML = total_pri4;
     }
     if(check2.checked && check3.checked){
-        let total_p = parseInt(Price_frist) + parseInt(Price_2) + parseInt(Price_3);
-        total_amount.innerHTML = total_p; 
+       let total_pri5 = Price_frist + price_2 + price_3;
+       total_amount.innerHTML = total_pri5;
     }
+    if(check1.checked && check3.checked){
+        let total_pri6 = Price_frist + price_1 + price_3;
+        total_amount.innerHTML = total_pri6;
+     }
     if(check1.checked && check2.checked && check3.checked){
-        let total_p = parseInt(Price_frist) + parseInt(Price_1) + parseInt(Price_2) +parseInt(Price_3);
-        total_amount.innerHTML = total_p; 
+       let total_pri7 = Price_frist + price_1 + price_2 + price_3;
+       total_amount.innerHTML = total_pri7;
     }
-})
+});
+
 
     window.onload = ()=>{
     // transfre plane price in dashbord
+
     // pic onece selector color
     if(check1.checked){
         service1.style.backgroundColor = "hsl(217, 100%, 97%)";
