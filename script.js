@@ -195,7 +195,7 @@ function myvalidationF(){
         input_all_3.style.border = "1px solid red";
         isValid = false;
     }
-    if(phone.length>10 && email.length>5 && name.length>5){
+    else if(phone.length>10 && email.length>5 && name.length>5){
         form1.style.display = "none";
         form2.style.display = "block";
         indicator_number_1.classList.remove("active-indicator");
