@@ -200,10 +200,11 @@ let input_all_3 = document.querySelector(".input_all_3");
            form2.style.display = "block";
            indicator_number_1.classList.remove("active-indicator");
            indicator_number_2.classList.add("active-indicator");
+           isValid = false;
         }
     });
     // end form 1 
-    
+
 next_btn_2.addEventListener("click",()=>{
     form2.style.display = "none";
     form3.style.display = "block";
