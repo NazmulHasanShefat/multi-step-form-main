@@ -175,7 +175,7 @@ let input_all_3 = document.querySelector(".input_all_3");
 
 // validation form personal information
 function myvalidationF(){
-    let isValid = true;
+    let isValid = false;
     let name = document.forms["myform_1"]["name"].value;
     if(name.length<5){
         error1.innerHTML = "*Input field required";
