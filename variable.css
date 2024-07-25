@@ -1,0 +1,17 @@
+:root{
+    --Marine_blue: hsl(213, 96%, 18%);
+    --Marine_blue_hover: hsl(213, 99%, 27%);
+    --Purplish_blue: hsl(243, 100%, 62%);
+    --Purplish_blue_hover: hsl(243, 100%, 81%);
+    --Pastel_blue: hsl(228, 100%, 84%);
+    --Light_blue: hsl(206, 94%, 87%);
+    --Strawberry_red: hsl(354, 84%, 57%);
+   --Cool_gray: hsl(231, 11%, 63%);
+   --Light_gray: hsl(229, 24%, 87%);
+   --Magnolia: hsl(217, 100%, 97%);
+   --Alabaster: hsl(231, 100%, 99%);
+   --White: hsl(0, 0%, 100%);
+   --heading_font:"Ubuntu", sans-serif;
+   --text_font: sans-serif;
+   --ubantu_font: "Ubuntu";
+}

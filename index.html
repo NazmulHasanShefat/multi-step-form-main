@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="./styles.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+<body>
+  <div class="container">
+    <div class="content-all">
+      <!-- indicators -->
+      <div class="indicator-container">
+        <div class="background-image">
+          <div class="indicator-box">
+            <div class="indicator">
+              <div class="indicator_number indi-1 active-indicator">1</div>
+              <div class="step_names">
+                <div class="step_number">STEP 1</div>
+                <div class="step_name">Your info</div>
+              </div>
+            </div>
+            <div class="indicator">
+              <div class="indicator_number indi-2">2</div>
+              <div class="step_names">
+                <div class="step_number">STEP 1</div>
+                <div class="step_name">Select plan</div>
+              </div>
+            </div>
+            <div class="indicator">
+              <div class="indicator_number indi-3">3</div>
+              <div class="step_names">
+                <div class="step_number">STEP 1</div>
+                <div class="step_name">Add-ons</div>
+              </div>
+            </div>
+            <div class="indicator">
+              <div class="indicator_number indi-4">4</div>
+              <div class="step_names">
+                <div class="step_number">STEP 1</div>
+                <div class="step_name">Summary</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end indicators -->
+      <div class="content-box">
+        <!-- forms -->
+        <!-- step 1 start -->
+        <form action="" class="form_all_1" id="myform_1" onsubmit="return myvalidationF()">
+          <div class="form_name">
+            <div class="wrap_form_name">
+               <h1>Personal info</h1>
+              <p class="input-d">Please provide your name, email address, and phone number.</p></div>
+          </div>
+          <div class="form_inputs">
+            <div class="wrap_inputs">
+              <div class="input1">
+                <div class="name_error_container">
+                  <div class="name_input">Name</div>
+                  <div class="error1"></div>
+                </div>
+                <input type="text" class="input_all_1 input_Fst" id="name" placeholder="e.g. Stephen King">
+              </div>
+              <div class="input1">
+                <div class="name_error_container">
+                  <div class="name_input">Email</div>
+                  <div class="error2"></div>
+                </div>
+                <input type="text" class="input_all_2 input_Fst" id="email" placeholder="e.g. stephenking@lorem.com">
+              </div>
+              <div class="input1">
+              <div class="name_error_container">
+                <div class="name_input">Phone</div>
+                <div class="error3"></div>
+              </div>
+                <input type="text" class="input_all_3 input_Fst" id="phone" placeholder="e.g. +1 234 567 890">
+              </div>
+            </div>
+          </div>
+          <div class="buttons_1">
+            <button type="submit" class="btn1">next</button>
+          </div>
+        </form>
+        <!-- step 1 end -->
+
+        <!-- step 2 -->
+        <form action="" class="form_all_2" onsubmit="return false">
+          <div class="form_name">
+            <div class="wrap_form_name">
+              <h1>Select your plan</h1>
+              <p class="input-d">You have the option of monthly or yearly billing.</p>
+            </div>
+          </div>
+          <div class="form_inputs">
+            <div class="form_L2_inputs">
+              <div class="L2_all_box">
+               <div class="L2_radio_box1">
+                  <input type="radio" id="check-1" name="check_box" class="radio_check" checked>
+                  <label for="check-1">
+                    <div class="select_Step_2 step2_selected_1">
+                      <div class="step_2_select_image">
+                        <img src="./assets/images/icon-arcade.svg" alt="">
+                      </div>
+                      <div>
+                        <div class="step_2_select_name step2_Arcade"><p>Arcade</p></div>
+                        <div class="step_2_select_price step_2_arcade"><p>$</p><p class="arcade_price">9</p><p class="month_year">/mo</p></div>
+                        <div class="step_2_select_2monthfree"><p class="month_free"></p></div>
+                      </div>
+                    </div>
+                  </label>
+               </div>
+               <div class="L2_radio_box1">
+                <input type="radio" id="check-2" name="check_box" class="radio_check">
+                  <label for="check-2">
+                    <div class="select_Step_2 step2_selected_2">
+                      <div class="step_2_select_image">
+                        <img src="./assets/images/icon-advanced.svg" alt="">
+                      </div>
+                      <div>
+                        <div class="step_2_select_name step2_Advanced"><p>Advanced</p></div>
+                        <div class="step_2_select_price step_2_advanced"><p>$</p><p class="advanced_price">12</p><p class="month_year">/mo</p></div>
+                        <div class="step_2_select_2monthfree"><p class="month_free"></p></div>
+                      </div>
+                    </div>
+                  </label>
+               </div>
+               <div class="L2_radio_box1">
+                <input type="radio" id="check-3" name="check_box" class="radio_check">
+                  <label for="check-3">
+                    <div class="select_Step_2 step2_selected_3">
+                      <div class="step_2_select_image">
+                        <img src="./assets/images/icon-pro.svg" alt="">
+                      </div>
+                      <div>
+                        <div class="step_2_select_name step2_pro"><p>pro</p></div>
+                      <div class="step_2_select_price step_2_pro"><p>$</p><p class="pro_price">15</p><p class="month_year">/mo</p></div>
+                      <div class="step_2_select_2monthfree"><p class="month_free"></p></div>
+                      </div>
+                    </div>
+                  </label>
+               </div>
+              </div>
+              <div class="L2_toggle_switch">
+                <div class="monthly_indicator_container"><p class="indicate_monthly">monthly</p></div>
+                <input type="checkbox" id="toggle_check" checked>
+                  <label for="toggle_check">
+                  <div class="toggle_btn">
+                    <div class="toggle-slider"></div>
+                  </div>
+                </label>
+                <div class="yearly_indicator_container"><p class="indicate_yearly">yearly</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="buttons_2">
+            <button class="btn_prev_1">next</button>
+            <button class="btn2">next</button>
+          </div>
+        </form>
+
+        <!-- end step 2 -->
+
+        <!-- start step 3 -->
+        <form action="" class="form_all_3" onsubmit="return false">
+          <div class="form_name">
+            <div class="wrap_form_name">
+              <h1>Pick add-ons</h1>
+              <p class="input-d">Add-ons help enhance your gaming experience.</p>
+            </div>
+          </div>
+          <div class="form_inputs">
+            <div class="pick_ons_boxs">
+
+              <label for="pic-checkbox-1" class="step3_label">
+              <div class="pic_selector pic-select-1">
+                <div class="checkbox_pic_container">
+                  <input type="checkbox" class="pic_ons_checkbox pic" id="pic-checkbox-1" checked>
+                </div>
+                <div class="pic-item-name-container">
+                  <div class="pic-item-name">Online service</div>
+                  <div class="pic-item-detail">Access to multiplayer games</div>
+                </div>
+                <div class="pic-item-price-container"><p>+$</p><p class="pic-m-price-1">1</p><p class="month_year">/mo</p></div>
+              </div>
+            </label>
+
+            <label for="pic-checkbox-2">
+              <div class="pic_selector pic-select-2">
+                <div class="checkbox_pic_container">
+                  <input type="checkbox" class="pic_ons_checkbox pic" id="pic-checkbox-2">
+                </div>
+                <div class="pic-item-name-container">
+                  <div class="pic-item-name">Lerger Storage</div>
+                  <div class="pic-item-detail">Access to multiplayer games</div>
+                </div>
+                <div class="pic-item-price-container"><p>$</p><p class="pic-m-price-2">2</p><p class="month_year">/mo</p></div>
+              </div>
+            </label>
+
+            <label for="pic-checkbox-3">
+              <div class="pic_selector pic-select-3">
+                <div class="checkbox_pic_container">
+                  <input type="checkbox" class="pic_ons_checkbox pic" id="pic-checkbox-3">
+                </div>
+                <div class="pic-item-name-container">
+                  <div class="pic-item-name">Customizable profile</div>
+                  <div class="pic-item-detail">Access to multiplayer games</div>
+                </div>
+                <div class="pic-item-price-container"><p>$</p><p class="pic-m-price-3">2</p><p class="month_year">/mo</p></div>
+              </div>
+            </label>
+
+            </div>
+          </div>
+           
+          <div class="buttons_3">
+            <button class="btn_prev_2">next</button>
+            <button class="btn3">next</button>
+          </div>
+        </form>
+
+        <!-- end step 3  -->
+
+        <!-- start step 4 -->
+        <form action="" class="form_all_4" onsubmit="return false">
+          <div class="form_name">
+            <div class="wrap_form_name">
+              <h1>Finishing up</h1>
+              <p class="input-d">Double-check everything looks OK before confirming.</p>
+            </div>
+          </div>
+          <div class="form_inputs">
+            <div class="total_dashBord_box">
+
+              <div class="plane_total_price_box">
+                 <div class="plane-total-name">
+                  <div class="plane-name">Arcade (monthly)</div>
+                  <div class="chenge_btn"><a href="#" class="change_button">Change</a></div>
+                 </div>
+                 <div class="plane-total-price"><p>$</p><p class="plane_last_price">22</p><p class="month_year">/mo</p></div>
+              </div>
+
+              <div class="pic_ons_total_price_box">
+                <div class="pic-total-1">
+                  <div class="pic-total-name">Online service</div>
+                  <div class="pic-total-price"><p>+$</p><p class="pic-price-1">1</p><p class="month_year">/mo</p></div>
+                </div>
+                <div class="pic-total-2">
+                  <div class="pic-total-name">Lerger storage</div>
+                  <div class="pic-total-price"><p>+$</p><p class="pic-price-2">2</p><p class="month_year">/mo</p></div>
+                </div>
+                <div class="pic-total-3">
+                  <div class="pic-total-name">Customizable Profile</div>
+                  <div class="pic-total-price"><p>+$</p><p class="pic-price-3">2</p><p class="month_year">/mo</p></div>
+                </div>
+              </div>
+
+            </div>
+             <div class="net-price-container">
+              <div class="net-price-name">total (per month)</div>
+              <div class="price-total"><p>+$</p><p class="price-all-total"></p><p class="month_year">/mo</p></div>
+             </div>
+          </div>
+            
+           
+          <div class="buttons_3">
+            <button class="btn_prev_3">back</button>
+            <button class="btn4">Confirm</button>
+          </div>
+        </form>
+
+        <div class="wellcome-page">
+          <div class="welcome-massage-box">
+            <div class="thankyou_icon"><img src="./assets/images/icon-thank-you.svg" alt=""></div>
+            <div class="thank-heading">
+              Thank you
+            </div>
+            <div class="thank-massage-text" style="text-align: center;">
+              Thanks for confirming your subscription! We hope you have fun 
+              using our platform. If you ever need support, please feel free 
+              to email us at support@loremgaming.com.
+            </div>
+          </div>
+        </div>
+        <!-- end welcome page -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="attribution" style="padding:15px;">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
