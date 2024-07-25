@@ -175,32 +175,27 @@ let input_all_3 = document.querySelector(".input_all_3");
 
 // validation form personal information
     next_btn_1.addEventListener("click",()=>{
-        let isValid = true;
         let name = document.forms["myform_1"]["name"].value;
         if(name.length<5){
             error1.innerHTML = "*Input field required";
             input_all_1.style.border = "1px solid red";
-            isValid = false;
         }
     
         let email = document.forms["myform_1"]["email"].value;
         if(email.length<5){
             error2.innerHTML = "*Input field required";
             input_all_2.style.border = "1px solid red";
-            isValid = false;
         }
         let phone = document.forms["myform_1"]["phone"].value;
         if(phone.length<5){
             error3.innerHTML = "*Input field required";
             input_all_3.style.border = "1px solid red";
-            isValid = false;
         }
         if(phone.length>10 && email.length>5 && name.length>5){
            form1.style.display = "none";
            form2.style.display = "block";
            indicator_number_1.classList.remove("active-indicator");
            indicator_number_2.classList.add("active-indicator");
-           isValid = false;
         }
     });
     // end form 1 
