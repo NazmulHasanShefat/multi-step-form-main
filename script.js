@@ -176,29 +176,27 @@ let input_all_3 = document.querySelector(".input_all_3");
 // validation form personal information
     next_btn_1.addEventListener("click",()=>{
         let name = document.forms["myform_1"]["name"].value;
-        if(name.length<5){
+        let email = document.forms["myform_1"]["email"];
+        let phone = document.forms["myform_1"]["phone"].value;
+        if(name.length<1){
             error1.innerHTML = "*Input field required";
             input_all_1.style.border = "1px solid red";
         }
-    
-        let email = document.forms["myform_1"]["email"].value;
-        if(email.length<5){
+        if(!email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
             error2.innerHTML = "*Input field required";
             input_all_2.style.border = "1px solid red";
         }
-        let phone = document.forms["myform_1"]["phone"].value;
-        if(phone.length<5){
+        if(phone.length<4){
             error3.innerHTML = "*Input field required";
             input_all_3.style.border = "1px solid red";
         }
-        if(phone.length>10 && email.length>5 && name.length>5){
-           form1.style.display = "none";
-           form2.style.display = "block";
-           indicator_number_1.classList.remove("active-indicator");
-           indicator_number_2.classList.add("active-indicator");
+        if(name.length>1 && phone.length>4 && email.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+            form1.style.display = "none";
+            form2.style.display = "block";
+            indicator_number_1.classList.remove("active-indicator");
+            indicator_number_2.classList.add("active-indicator");
         }
     });
-    // end form 1 
 
 next_btn_2.addEventListener("click",()=>{
     form2.style.display = "none";
